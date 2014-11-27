@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.Firefox</string>
+	<key>Input</key>
+	<dict>
+		<key>LOCALE</key>
+		<string>en_US</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>Application/Firefox</string>
+		<key>NAME</key>
+		<string>Firefox</string>
+		<key>RELEASE</key>
+		<string>latest</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>0000_development</string>
+			</array>
+			<key>description</key>
+			<string>Mozilla Firefox is a free and open source web browser.</string>
+			<key>display_name</key>
+			<string>Firefox</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<false/>
+    		        <key>postinstall_script</key>
+<string>#!/bin/bash
+LOCAL="/Applications/Firefox.app/Contents/MacOS/defaults/pref/local-settings.js"
+touch -f $LOCAL
+echo "// custom Leiden University Campus ../defaults/pref/local-settings.js
+pref('general.config.obscure_value', 0);
+pref('general.config.filename', 'firefox_Campus.cfg');" > $LOCAL
+CAMPUS="/Applications/Firefox.app/Contents/MacOS/firefox_Campus.cfg"
+touch -f $CAMPUS
+echo "//
+// Leiden University Firefox preference file
+// lockPref:    locked preferences
+// pref:        defaults
+//
+// Disable all updates
+lockPref('app.update.enabled', false);
+lockPref('app.update.autoUpdateEnabled', false);
+lockPref('extensions.update.autoUpdate', false);
+lockPref('extensions.update.enabled', false);
+lockPref('browser.search.update', false);
+lockPref('browser.startup.homepage_override.mstone','ignore');
+//
+// Disable password manager by default
+pref('signon.rememberSignons', false);
+//
+// Disable browser check by default
+pref('browser.shell.checkDefaultBrowser', false);
+//
+// Set homepage to default
+pref('browser.startup.homepage','http://www.leidenuniv.nl');
+pref('browser.startup.homepage_reset','http://www.leidenuniv.nl');" > $CAMPUS
+OVERRIDE="/Applications/Firefox.app/Contents/MacOS/override.ini"
+touch -f $OVERRIDE
+echo "[XRE]
+EnableProfileMigrator=false" > $OVERRIDE
+exit 0
+        </string>
+
+		</dict>
+	</dict>
+
+	<key>ParentRecipe</key>
+	<string>com.github.autopkg.munki.firefox-rc-en_US</string>
+</dict>
+</plist>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.Adium</string>
+	<key>Input</key>
+	<dict>
+		<key>BRANCH</key>
+		<string>release</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>Application/Adium/</string>
+		<key>NAME</key>
+		<string>Adium</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>0000_development</string>
+			</array>
+			<key>description</key>
+			<string>Adium is a free instant messaging application for Mac OS X that can connect to AIM, MSN, Jabber, Yahoo, and more.</string>
+			<key>display_name</key>
+			<string>Adium</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<false/>
+			<key>category</key>
+			<string>Applications</string>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.autopkg.munki.Adium</string>
+</dict>
+</plist>

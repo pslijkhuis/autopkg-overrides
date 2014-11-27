@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.AdobeDigitalEditions</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>Application/Adobe/DigitalEditions</string>
+		<key>NAME</key>
+		<string>AdobeDigitalEditions</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>0000_development</string>
+			</array>
+			<key>category</key>
+			<string>Books</string>
+			<key>description</key>
+			<string>Adobe® Digital Editions software offers an engaging way to view and manage eBooks and other digital publications. Use it to download and purchase digital content, which can be read both online and offline. Transfer copy-protected eBooks from your personal computer to other computers or devices. Organize your eBooks into a custom library and annotate pages. Digital Editions also supports industry-standard eBook formats, including PDF/A and EPUB.</string>
+			<key>developer</key>
+			<string>Adobe Systems Software</string>
+			<key>display_name</key>
+			<string>Adobe Digital Editions</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.uib.autopkg-recipes.munki.AdobeDigitalEditions</string>
+</dict>
+</plist>
