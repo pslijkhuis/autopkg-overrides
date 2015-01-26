@@ -26,6 +26,10 @@
 			<string>%NAME%</string>
 			<key>unattended_install</key>
 			<false/>
+			<key>category</key>
+			<string>Plugins</string>
+			<key>developer</key>
+			<string>Adobe Systems Software</string>
 		</dict>
 	</dict>
 	<key>ParentRecipe</key>

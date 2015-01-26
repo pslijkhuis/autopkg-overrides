@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>Identifier</key>
-	<string>local.munki.GoogleChrome</string>
+	<string>local.munki.cyberduck</string>
 	<key>Input</key>
 	<dict>
-		<key>DOWNLOAD_URL</key>
-		<string>https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg</string>
 		<key>MUNKI_REPO_SUBDIR</key>
-		<string>Application/Google</string>
+		<string>Application/Cyberduck</string>
 		<key>NAME</key>
-		<string>GoogleChrome</string>
+		<string>Cyberduck</string>
+		<key>SPARKLE_FEED_URL</key>
+		<string>http://version.cyberduck.ch/changelog.rss</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -19,20 +19,18 @@
 				<string>0000_development</string>
 			</array>
 			<key>description</key>
-			<string>Chrome is a fast, simple, and secure web browser, built for the modern web.</string>
+			<string>With an easy to use interface, connect to FTP, SFTP, WebDAV, Amazon S3, Google Storage, Windows Azure, Rackspace Cloud Files and even Google Docs.</string>
 			<key>display_name</key>
-			<string>Google Chrome</string>
+			<string>Cyberduck</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
 			<false/>
 			<key>category</key>
 			<string>Connectivity</string>
-			<key>developer</key>
-			<string>Google</string>
 		</dict>
 	</dict>
 	<key>ParentRecipe</key>
-	<string>com.github.autopkg.munki.google-chrome</string>
+	<string>com.github.autopkg.munki.Cyberduck</string>
 </dict>
 </plist>

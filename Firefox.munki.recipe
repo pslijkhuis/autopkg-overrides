@@ -28,14 +28,18 @@
 			<string>%NAME%</string>
 			<key>unattended_install</key>
 			<false/>
+			<key>category</key>
+			<string>Connectivity</string>
+			<key>developer</key>
+			<string>Mozilla</string>
     		        <key>postinstall_script</key>
 <string>#!/bin/bash
-LOCAL="/Applications/Firefox.app/Contents/MacOS/defaults/pref/local-settings.js"
+LOCAL="/Applications/Firefox.app/Contents/Resources/defaults/pref/local-settings.js"
 touch -f $LOCAL
 echo "// custom Leiden University Campus ../defaults/pref/local-settings.js
 pref('general.config.obscure_value', 0);
 pref('general.config.filename', 'firefox_Campus.cfg');" > $LOCAL
-CAMPUS="/Applications/Firefox.app/Contents/MacOS/firefox_Campus.cfg"
+CAMPUS="/Applications/Firefox.app/Contents/Resources/firefox_Campus.cfg"
 touch -f $CAMPUS
 echo "//
 // Leiden University Firefox preference file

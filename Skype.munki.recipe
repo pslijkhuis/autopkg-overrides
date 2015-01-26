@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>Identifier</key>
-	<string>local.munki.GoogleChrome</string>
+	<string>local.munki.Skype</string>
 	<key>Input</key>
 	<dict>
 		<key>DOWNLOAD_URL</key>
-		<string>https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg</string>
+		<string>http://www.skype.com/go/getskype-macosx.dmg</string>
 		<key>MUNKI_REPO_SUBDIR</key>
-		<string>Application/Google</string>
+		<string>Application/Microsoft/Skype/</string>
 		<key>NAME</key>
-		<string>GoogleChrome</string>
+		<string>Skype</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -19,20 +19,18 @@
 				<string>0000_development</string>
 			</array>
 			<key>description</key>
-			<string>Chrome is a fast, simple, and secure web browser, built for the modern web.</string>
+			<string>Calling, seeing, messaging and sharing with others – wherever they are.</string>
 			<key>display_name</key>
-			<string>Google Chrome</string>
+			<string>Skype</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
 			<false/>
 			<key>category</key>
 			<string>Connectivity</string>
-			<key>developer</key>
-			<string>Google</string>
 		</dict>
 	</dict>
 	<key>ParentRecipe</key>
-	<string>com.github.autopkg.munki.google-chrome</string>
+	<string>com.github.autopkg.munki.Skype</string>
 </dict>
 </plist>

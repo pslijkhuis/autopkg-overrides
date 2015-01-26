@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>Identifier</key>
-	<string>local.munki.GoogleChrome</string>
+	<string>local.munki.Spotify</string>
 	<key>Input</key>
 	<dict>
 		<key>DOWNLOAD_URL</key>
-		<string>https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg</string>
+		<string>http://www.spotify.com/download/Spotify.dmg</string>
 		<key>MUNKI_REPO_SUBDIR</key>
-		<string>Application/Google</string>
+		<string>Application/Spotify</string>
 		<key>NAME</key>
-		<string>GoogleChrome</string>
+		<string>Spotify</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -19,20 +19,20 @@
 				<string>0000_development</string>
 			</array>
 			<key>description</key>
-			<string>Chrome is a fast, simple, and secure web browser, built for the modern web.</string>
+			<string>Spotify is a music streaming service offering unlimited streaming of selected music from a range of major and independent record labels.</string>
 			<key>display_name</key>
-			<string>Google Chrome</string>
+			<string>Spotify</string>
+			<key>category</key>
+			<string>Audio</string>
+			<key>developer</key>
+			<string>Spotify</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
-			<false/>
-			<key>category</key>
-			<string>Connectivity</string>
-			<key>developer</key>
-			<string>Google</string>
+			<true/>
 		</dict>
 	</dict>
 	<key>ParentRecipe</key>
-	<string>com.github.autopkg.munki.google-chrome</string>
+	<string>com.github.autopkg.munki.Spotify</string>
 </dict>
 </plist>

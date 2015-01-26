@@ -26,8 +26,8 @@
 			<string>%NAME%</string>
 			<key>unattended_install</key>
 			<false/>
-			<key>category</key>
-			<string>Applications</string>
+			        <key>category</key>
+        <string>Connectivity</string>
 		</dict>
 	</dict>
 	<key>ParentRecipe</key>
