@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.StuffItExpander</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>Application/Stuffit</string>
+		<key>NAME</key>
+		<string>Stuffit</string>
+		<key>SPARKLE_FEED_URL</key>
+		<string>http://www.stuffit.com/update_rss/NEU/StuffItExpanderUpdates.xml</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>0000_development</string>
+			</array>
+			<key>display_name</key>
+			<string>StuffIt Expander</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<false/>
+        <key>postinstall_script</key>
+        <string>#!/bin/sh
+                        /usr/bin/dscl /Local/Default mcxset /Groups/mcx_campus com.stuffit.StuffIt-Expander SUEnableAutomaticChecks always -bool false
+                        /usr/bin/dscl /Local/Default mcxset /Groups/mcx_campus com.stuffit.StuffIt-Expander SUHasLaunchedBefore always -bool true
+                        /usr/bin/dscl /Local/Default mcxset /Groups/mcx_campus com.stuffit.StuffIt-Expander SUSendProfileInfo always -bool true
+                        /usr/bin/dscl /Local/Default mcxset /Groups/mcx_campus com.stuffit.StuffIt-Expander registrationAction always -integer 2
+        </string>
+
+        <key>category</key>
+        <string>Office</string>
+        <key>description</key>
+        <string>Unarchiver for various archive types like zip, rar, tar and many more</string>
+        <key>RestartAction</key>
+        <string>RequireLogout</string>
+
+
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.keeleysam.recipes.StuffItExpander.munki</string>
+</dict>
+</plist>

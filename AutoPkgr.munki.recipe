@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.AutoPkgr</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>Application/AutoPkgr</string>
+		<key>NAME</key>
+		<string>AutoPkgr</string>
+		<key>SPARKLE_FEED_URL</key>
+		<string>https://raw.githubusercontent.com/lindegroup/autopkgr/appcast/appcast.xml</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>0000_development</string>
+			</array>
+			<key>description</key>
+			<string>AutoPkgr makes it simple to get started using autopkg to automate Mac software packaging.</string>
+			<key>display_name</key>
+			<string>AutoPkgr</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<false/>
+			<key>category</key>
+			<string>Office</string>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.homebysix.munki.AutoPkgr</string>
+</dict>
+</plist>

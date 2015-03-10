@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.RDC</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>Application/Microsoft/RDC</string>
+		<key>NAME</key>
+		<string>RDC</string>
+		<key>PATH</key>
+		<string>/Applications/Microsoft Remote Desktop.app</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>0000_development</string>
+			</array>
+			<key>display_name</key>
+			<string>Microsoft Remote Desktop Connection</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<false/>
+			<key>description</key>
+			 <string>Microsoft Remote Desktop Connection - application for connecting to Microsoft Terminal Services.</string>
+        <key>category</key>
+        <string>Connectivity</string>
+        <key>developer</key>
+        <string>Microsoft</string>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.nmcspadden.munki.appstore</string>
+</dict>
+</plist>

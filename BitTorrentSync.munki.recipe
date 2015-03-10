@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.BitTorrentSync</string>
+	<key>Input</key>
+	<dict>
+		<key>DOWNLOAD_URL</key>
+		<string>http://download-new.utorrent.com/endpoint/btsync/os/osx/track/stable</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>Application/BitTorrent</string>
+		<key>NAME</key>
+		<string>BTSync</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>0000_development</string>
+			</array>
+			<key>description</key>
+			<string>BitTorrent Sync for Mac. Sync files without the cloud, using peer-to-peer connections.</string>
+			<key>display_name</key>
+			<string>BitTorrent Sync</string>
+			<key>minimum_os_version</key>
+			<string>10.6</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<false/>
+			<key>category</key>
+			<string>Connectivity</string>
+			<key>developer</key>
+			<string>BitTorrent</string>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.homebysix.munki.BitTorrentSync</string>
+</dict>
+</plist>
